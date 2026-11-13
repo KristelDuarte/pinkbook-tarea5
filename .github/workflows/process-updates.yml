@@ -1,0 +1,25 @@
+name: Procesar actualizaciones pendientes
+
+# Invoca periódicamente las funciones *Tasks para aplicar las actualizaciones
+# registradas en la lista `bookstore`.
+#
+# Configuración: Settings > Secrets and variables > Actions > Variables
+#   PINKBOOK_BACKEND_URL = https://su-sitio.netlify.app
+
+on:
+  schedule:
+    - cron: "*/30 * * * *"
+  workflow_dispatch:
+
+jobs:
+  process:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Procesar libros
+        run: curl -fsS -X POST "${{ vars.PINKBOOK_BACKEND_URL }}/.netlify/functions/bookTasks"
+
+      - name: Procesar autores
+        run: curl -fsS -X POST "${{ vars.PINKBOOK_BACKEND_URL }}/.netlify/functions/authorTasks"
+
+      - name: Procesar editoriales
+        run: curl -fsS -X POST "${{ vars.PINKBOOK_BACKEND_URL }}/.netlify/functions/publisherTasks"

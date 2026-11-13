@@ -1,0 +1,19 @@
+{
+  "name": "bookstore-redis-tarea5",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Bookstore con actualizaciones diferidas en la lista bookstore de Redis Cloud (Tarea 5 - Sistemas Distribuidos)",
+  "scripts": {
+    "test": "node --test",
+    "dev:api": "netlify dev"
+  },
+  "dependencies": {
+    "ioredis": "^5.8.2"
+  },
+  "devDependencies": {
+    "ioredis-mock": "^8.9.2"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
