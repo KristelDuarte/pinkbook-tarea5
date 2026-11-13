@@ -4,6 +4,7 @@
 
 ## Enlaces
 
-- **Aplicación (frontend):** pendiente de publicación en GitHub Pages
-- **Backend (Netlify):** pendiente de publicación
-- **API:** pendiente de publicación
+- **Aplicación (PinkBook):** https://kristelduarte.github.io/pinkbook-tarea5/
+- **Backend (Netlify):** https://pinkbook-tarea5.netlify.app
+- **API:** https://pinkbook-tarea5.netlify.app/.netlify/functions
+- **Repositorio:** https://github.com/KristelDuarte/pinkbook-tarea5
